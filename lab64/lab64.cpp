@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 int countElementsLessThanC(int arr[], int n, double C, int currentIndex = 0) {
     if (currentIndex == n) {
         return 0;
@@ -52,32 +52,32 @@ int main() {
     int n;
     double C;
 
-    std::cout << "Enter the number of elements (n): ";
-    std::cin >> n;
+    cout << "Enter the number of elements (n): ";
+    cin >> n;
 
     int* arr = new int[n];
 
-    std::cout << "Enter " << n << " integers: ";
+    cout << "Enter " << n << " integers: ";
     for (int i = 0; i < n; i++) {
         std::cin >> arr[i];
     }
 
-    std::cout << "Enter the value of C: ";
-    std::cin >> C;
+    cout << "Enter the value of C: ";
+    cin >> C;
 
     int count = countElementsLessThanC(arr, n, C);
-    std::cout << " less than C: " << count << std::endl;
+    cout << " less than C: " << count << endl;
 
     int sum = sumIntPartsAfterLastNegative(arr, n);
-    std::cout << "Sum of integer parts after the last negative element: " << sum << std::endl;
+    cout << "Sum of integer parts after the last negative element: " << sum << endl;
 
     swapElements(arr, n);
 
-    std::cout << "Modified array: ";
+    cout << "Modified array: ";
     for (int i = 0; i < n; i++) {
-        std::cout << arr[i] << " ";
+        cout << arr[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
 
     delete[] arr;
 
